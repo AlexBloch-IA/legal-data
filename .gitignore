@@ -7,3 +7,6 @@ node_modules/
 .vscode/
 .clawhub/origin.json
 graphify-out/
+.claude/
+reports/
+*.tgz

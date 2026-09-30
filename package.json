@@ -7,7 +7,7 @@
   "homepage": "https://legaldata-public.cleolabs.co",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexBloch-IA/legal-data"
+    "url": "git+https://github.com/AlexBloch-IA/legal-data.git"
   },
   "bugs": {
     "url": "https://github.com/AlexBloch-IA/legal-data/issues"
