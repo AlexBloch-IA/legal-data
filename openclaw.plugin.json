@@ -2,9 +2,7 @@
   "id": "legal-data",
   "name": "Legal Data Plugin for OpenClaw",
   "description": "Legal data plugin for OpenClaw — real regulations from 66 official sources across 100+ countries. GDPR, customs/HS codes, sanctions, dual-use, EAEU, GOST. Stops your agent from hallucinating legal citations.",
-  "version": "1.2.2",
-  "homepage": "https://legaldata-public.cleolabs.co",
-  "license": "MIT-0",
+  "version": "1.2.3",
   "skills": [
     "skills/regulatory-research",
     "skills/gdpr-data-protection",
@@ -15,7 +13,9 @@
   "configSchema": {
     "type": "object",
     "additionalProperties": false,
-    "required": ["CLEO_LEGAL_API_KEY"],
+    "required": [
+      "CLEO_LEGAL_API_KEY"
+    ],
     "properties": {
       "CLEO_LEGAL_API_KEY": {
         "type": "string",
@@ -30,38 +30,17 @@
       }
     }
   },
-  "setup": {
-    "providers": [
-      {
-        "name": "cleo-legal-signup",
-        "description": "Open legaldata-public.cleolabs.co/signup in browser to obtain an API key",
-        "url": "https://legaldata-public.cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup",
-        "envVar": "CLEO_LEGAL_API_KEY"
-      }
-    ]
-  },
-  "keywords": [
-    "openclaw-plugin",
-    "clawhub",
-    "mcp",
-    "legal",
-    "regulatory",
-    "compliance",
-    "gdpr",
-    "ccpa",
-    "lgpd",
-    "pipl",
-    "customs",
-    "hs-code",
-    "tn-ved",
-    "sanctions",
-    "ofac",
-    "dual-use",
-    "wassenaar",
-    "kyc",
-    "aml",
-    "eaeu",
-    "gost",
-    "anti-hallucination"
-  ]
+  "uiHints": {
+    "CLEO_LEGAL_API_KEY": {
+      "label": "Cleo Legal API key",
+      "help": "Get a key at https://legaldata-public.cleolabs.co/signup?utm_source=clawhub&utm_medium=cli&utm_campaign=clawhub-setup (can also be set via the CLEO_LEGAL_API_KEY env var).",
+      "placeholder": "ld_live_...",
+      "sensitive": true
+    },
+    "CLEO_LEGAL_MCP_URL": {
+      "label": "MCP server URL",
+      "help": "Override the MCP server URL (default: production).",
+      "advanced": true
+    }
+  }
 }

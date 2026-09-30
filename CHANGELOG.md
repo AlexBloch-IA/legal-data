@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.3 — 2026-09-30 (manifest schema fix)
+
+Clears the ClawHub "Needs review" flag `manifest-unknown-fields` ("manifest uses unsupported top-level fields"). No behavior changes.
+
+- **Fix**: removed `homepage`, `license` and `keywords` from `openclaw.plugin.json`. They are not part of OpenClaw's `PluginManifest` type (`docs/plugins/manifest.md`, "Top-level field reference"; "Only documented manifest fields are read by the manifest loader"). They already live in `package.json`; the manifest-only keywords (`clawhub`, `ccpa`, `lgpd`, `pipl`, `tn-ved`, `anti-hallucination`) were merged there.
+- **Fix**: replaced the `setup.providers` entry (no `id`, undocumented `name`/`description`/`url`/`envVar` keys, silently dropped by the OpenClaw loader) with `uiHints` for `CLEO_LEGAL_API_KEY` (label, signup link, placeholder, `sensitive`) and `CLEO_LEGAL_MCP_URL` (advanced).
+- **Chore**: version bumped to 1.2.3 across `package.json`, `openclaw.plugin.json`, `.claude-plugin/plugin.json` and the `X-Client` header in `.mcp.json`.
+
 ## 1.2.2 — 2026-05-22 (publish workflow fix)
 
 Re-cuts 1.2.1 after the publish workflow failed on both jobs.

@@ -1,7 +1,7 @@
 {
   "name": "legal-data",
   "description": "Legal data plugin for OpenClaw — real regulations from 66 official sources across 100+ countries. GDPR, customs/HS codes, sanctions, dual-use, EAEU, GOST.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": {
     "name": "Cleo Labs",
     "email": "hello@cleolabs.co",

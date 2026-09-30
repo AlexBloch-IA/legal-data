@@ -6,7 +6,7 @@
         "transport": "streamable-http",
         "headers": {
           "Authorization": "Bearer ${CLEO_LEGAL_API_KEY}",
-          "X-Client": "openclaw-plugin/1.2.2"
+          "X-Client": "openclaw-plugin/1.2.3"
         },
         "connectionTimeoutMs": 30000
       }
